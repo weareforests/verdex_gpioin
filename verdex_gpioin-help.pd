@@ -1,0 +1,18 @@
+#N canvas 829 137 371 214 10;
+#X obj 14 104 print;
+#X obj 14 72 verdex_gpioin 0;
+#X obj 14 42 metro 50;
+#X obj 14 11 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X text 126 10 Reads data from GUMSTIX VERDEX GPIO;
+#X text 126 26 outputs 0 or 1 on change;
+#X text 125 42 (when banged);
+#X text 126 72 WARNING \, do not use on any system;
+#X text 126 89 apart from GUMSTIX VERDEX;
+#X text 127 106 you could damage hardware!;
+#X text 15 136 parameter - LDD pin (0-15);
+#X text 15 153 uses LDD GPIO (LCD screen);
+#X text 15 170 do not use with GUMSTIX LCD board;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
