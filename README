@@ -1,0 +1,34 @@
+verdex-gpioin - PD External for GPIO input on Gumstix Verdex systems
+
+Copyright (C) 2011 Tim Redfern
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser
+General Public License as published by the Free Software Foundation; either version 2.1 of the License,
+or (at your option) any later version.
+
+================================================================
+
+VERDEX-GPIOIN allows the state of GPIO pins 58-73 to be monitored from within PD (or pd-anywhere).
+
+These GPIO pins are broken out on the audiostix board as LDD0-LDD15.
+
+=================================================================
+WARNING! DO NOT USE THIS SOFTWARE WITH ANY COMPUTER OTHER THAN A GUMSTIX VERDEX
+HARDWARE DAMAGE IS POSSIBLE BY MANIPULATION OF GPIO PORTS ON EMBEDDED SYSTEMS
+
+To use- 
+
+1. copy verdex_gpioin.pd_linux and verdex_gpioin-help.pd to:
+        EITHER the same folder as your patch, or the PD extras folder (/usr/lib/pd/extra)
+
+2. connect a (~47k?) resistor from the LDD pin you are using to GND (pulldown resistor)
+
+3. connect a push-to-make switch from VCC to the LDD pin
+
+4. poll the external in PD as in the help file. verdex_gpioin will output a 0 or 1 when the GPIO state changes
+
+5. use a higher or lower poll rate for quicker response/ more 'debounce'
+
+=================================================================
+VERDEX-GPIOIN was developed exclusively for Duncan Speakman - WeAreForests
+Bugs, issues, suggestions: tim@eclectronics.org
